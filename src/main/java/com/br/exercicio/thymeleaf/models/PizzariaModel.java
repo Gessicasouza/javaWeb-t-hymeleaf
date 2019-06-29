@@ -2,7 +2,6 @@ package com.br.exercicio.thymeleaf.models;
 
 public class PizzariaModel {
 
-	private String imagem;
 	private String sabor;
 	private String massa;
 	private String tipoDeBorda;
@@ -12,20 +11,12 @@ public class PizzariaModel {
 
 	}
 
-	public PizzariaModel(String imagem, String sabor, String massa, String tipoDeBorda, double valor) {
-		this.imagem = imagem;
+	public PizzariaModel(String sabor, String massa, String tipoDeBorda, double valor) {
+
 		this.sabor = sabor;
 		this.massa = massa;
 		this.tipoDeBorda = tipoDeBorda;
 		this.valor = valor;
-	}
-
-	public String getImagem() {
-		return imagem;
-	}
-
-	public void setImagem(String imagem) {
-		this.imagem = imagem;
 	}
 
 	public String getSabor() {
@@ -67,7 +58,7 @@ public class PizzariaModel {
 		catalago.append("Sabor: " + this.sabor + "\n");
 		catalago.append("Massa: " + this.massa);
 		catalago.append("Tipo de borda: " + this.tipoDeBorda + "\n");
-		catalago.append("valor: " + this.valor + "\n");
+		catalago.append("R$: " + this.valor + "\n");
 
 		return catalago.toString();
 	}
